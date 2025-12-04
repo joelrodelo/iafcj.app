@@ -2,15 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IAFCJ App - Herramientas Digitales</title>
     <meta name="description" content="Portal de herramientas digitales para la Iglesia Apostólica de la Fe en Cristo Jesús." />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons (Vanilla) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,94 +20,9 @@
         font-family: 'Inter', sans-serif;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
-  }
-}
-</script>
-</head>
-  <body class="min-h-screen bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
-    
-    <!-- Background decoration -->
-    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl -translate-y-1/2"></div>
-      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gray-50/50 rounded-full blur-3xl translate-y-1/2"></div>
-    </div>
-
-    <main class="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-24">
-      
-      <!-- Header -->
-      <header class="mb-20 text-center md:text-left">
-        <div class="inline-flex items-center justify-center md:justify-start space-x-2 mb-6">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-gray-900 text-white">
-            <i data-lucide="heart-handshake" class="w-4 h-4"></i>
-          </span>
-          <span class="text-sm font-semibold tracking-wide uppercase text-gray-500">
-            IAFCJ App
-          </span>
-        </div>
-        
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-          Herramientas para la <br class="hidden md:block" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">
-            Iglesia Digital
-          </span>
-        </h1>
-        
-        <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-          Una suite centralizada de utilidades digitales diseñadas para facilitar el ministerio, la alabanza y la organización de la Iglesia Apostólica de la Fe en Cristo Jesús.
-        </p>
-      </header>
-
-      <!-- Tools Grid -->
-      <section>
-        <div class="flex items-center space-x-2 mb-8">
-           <i data-lucide="hammer" class="w-4 h-4 text-gray-400"></i>
-           <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">
-             Aplicaciones Disponibles
-           </h2>
-        </div>
-       
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-          
-          <!-- Card 1: Himnario (Active) -->
-          <a href="http://himnario.iafcj.app/" target="_blank" rel="noopener noreferrer" class="block p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-300 group">
-            <div class="flex items-start justify-between mb-4">
-              <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
-                <i data-lucide="book-open" class="w-6 h-6 stroke-[1.5]"></i>
-              </div>
-              <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-300 group-hover:text-blue-600 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2 text-gray-900 group-hover:text-blue-900">
-              Himnario Digital
-            </h3>
-            <p class="text-sm leading-relaxed text-gray-500">
-              Colección completa de himnos y coros de la IAFCJ. Búsqueda rápida, letras y acordes optimizados para móvil.
-            </p>
-          </a>
-
-          <!-- Card 2: Liturgia (Coming Soon) -->
-          <div class="block p-6 rounded-2xl bg-gray-50 border border-gray-100 cursor-not-allowed opacity-75">
-            <div class="flex items-start justify-between mb-4">
-              <div class="p-3 rounded-xl bg-gray-100 text-gray-400">
-                <i data-lucide="music" class="w-6 h-6 stroke-[1.5]"></i>
-              </div>
-              <div class="flex items-center space-x-1 text-xs font-medium text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
-                <i data-lucide="lock" class="w-3 h-3"></i>
-                <span>Próximamente</span>
-               </div>
-            </div>
-            <h3 class="text-lg font-semibold mb-2 text-gray-400">
-              Liturgia y Recursos
-            </h3>
-            <p class="text-sm leading-relaxed text-gray-400">
-              Guías para directores de culto, lecturas bíblicas y orden del servicio dominical.
-            </p>
-          </div>
-
-          <!-- Card 3: Directorio (Coming Soon)
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
