@@ -33,6 +33,9 @@
       body {
         font-family: 'Inter', sans-serif;
       }
+      .hidden {
+        display: none !important;
+      }
     </style>
   </head>
   <body class="min-h-screen bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
@@ -46,7 +49,143 @@
       ></div>
     </div>
 
-    <main class="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-24">
+    <!-- Página de Privacidad -->
+    <div id="privacy-page" class="relative z-10" style="display: none;">
+      <div class="max-w-4xl mx-auto px-6 py-12 md:py-24">
+        <div class="mb-8">
+          <a
+            href="/"
+            onclick="showHome(event)"
+            class="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors mb-6"
+          >
+            <span>←</span>
+            <span>Volver al inicio</span>
+          </a>
+        </div>
+
+        <article>
+          <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+            Política de Privacidad
+          </h1>
+          
+          <div class="text-sm text-gray-500 mb-12">
+            <p class="font-semibold">IAFCJ App & Himnario Digital</p>
+            <p>Última actualización: 27 de diciembre de 2025</p>
+          </div>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-900">1. Identidad del responsable</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              El presente sitio web y sus aplicaciones asociadas son operados por IAFCJ App, una iniciativa digital independiente creada con el objetivo de apoyar y facilitar el acceso a herramientas, recursos y contenidos de utilidad para la comunidad cristiana, sin representar oficialmente a ninguna organización religiosa.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-2 font-semibold">Dominios asociados:</p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4 ml-4">
+              <li>https://iafcj.app</li>
+              <li>https://himnario.iafcj.app</li>
+            </ul>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-900">2. Información que recopilamos</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Este sitio no solicita información personal directamente a los usuarios, salvo cuando el usuario decide proporcionar información de manera voluntaria a través de medios de contacto explícitos.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-2">
+              De forma automática, pueden recopilarse datos anónimos como:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4 ml-4">
+              <li>Dirección IP</li>
+              <li>Tipo de navegador</li>
+              <li>Tipo de dispositivo</li>
+              <li>Páginas visitadas</li>
+              <li>Tiempo de navegación</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              Esta información se utiliza exclusivamente con fines estadísticos, técnicos y de mejora del servicio.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-900">3. Uso de cookies</h2>
+            <p class="text-gray-700 leading-relaxed mb-2">
+              Este sitio puede utilizar cookies para:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4 ml-4">
+              <li>Analizar el uso y tráfico del sitio</li>
+              <li>Mejorar la experiencia de navegación</li>
+              <li>Mostrar anuncios relevantes mediante Google AdSense</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed mb-2">
+              Las cookies no recopilan información personal identificable.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              El usuario puede configurar su navegador para rechazar el uso de cookies si así lo desea.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-900">4. Google AdSense</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Este sitio utiliza Google AdSense, un servicio de publicidad proporcionado por Google Inc.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Google puede utilizar cookies para mostrar anuncios personalizados o no personalizados, en función de la configuración del usuario y de sus políticas de privacidad.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Puedes consultar cómo Google gestiona los datos en: 
+              <a 
+                href="https://policies.google.com/privacy" 
+                target="_blank" 
+                rel="noreferrer"
+                class="text-blue-600 hover:text-blue-800 underline"
+              >
+                https://policies.google.com/privacy
+              </a>
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-900">5. Enlaces a sitios externos</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Nuestros sitios pueden contener enlaces a páginas externas. IAFCJ App no se responsabiliza por las prácticas de privacidad, políticas o contenido de dichos sitios externos.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-900">6. Contenido y derechos de autor</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              El contenido presentado en este sitio y en el himnario digital se utiliza con fines informativos, educativos y de apoyo comunitario.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Los derechos de autor de los cantos, himnos o textos pertenecen a sus respectivos autores o titulares.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Si algún contenido infringe derechos de autor, el titular puede solicitar su revisión o retiro a través de los medios de contacto del sitio.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-900">7. Cambios en esta política</h2>
+            <p class="text-gray-700 leading-relaxed mb-2">
+              IAFCJ App se reserva el derecho de modificar esta Política de Privacidad en cualquier momento.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Las actualizaciones serán publicadas en esta misma página.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-900">8. Contacto</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Para dudas relacionadas con esta política, puedes comunicarte a través de los medios de contacto disponibles en el sitio.
+            </p>
+          </section>
+        </article>
+      </div>
+    </div>
+
+    <!-- Página Principal -->
+    <main id="home-page" class="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-24">
       <!-- Header -->
       <header class="mb-20 text-center md:text-left">
         <div class="inline-flex items-center justify-center md:justify-start space-x-2 mb-6">
@@ -206,7 +345,7 @@
       >
         <p>&copy; 2025 IAFCJ App. Todos los derechos reservados.</p>
         <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="#" class="hover:text-gray-600 transition-colors">Privacidad</a>
+          <a href="/privacidad" onclick="showPrivacy(event)" class="hover:text-gray-600 transition-colors cursor-pointer">Privacidad</a>
           <a href="#" class="hover:text-gray-600 transition-colors">Contacto</a>
           <a
             href="https://iafcj.org"
@@ -219,5 +358,40 @@
         </div>
       </footer>
     </main>
+
+    <script>
+      function showPrivacy(event) {
+        if (event) event.preventDefault();
+        document.getElementById('home-page').style.display = 'none';
+        document.getElementById('privacy-page').style.display = 'block';
+        window.history.pushState({page: 'privacy'}, '', '/privacidad');
+        window.scrollTo(0, 0);
+      }
+
+      function showHome(event) {
+        if (event) event.preventDefault();
+        document.getElementById('privacy-page').style.display = 'none';
+        document.getElementById('home-page').style.display = 'block';
+        window.history.pushState({page: 'home'}, '', '/');
+        window.scrollTo(0, 0);
+      }
+
+      // Manejar botón atrás/adelante del navegador
+      window.addEventListener('popstate', function(event) {
+        if (window.location.pathname === '/privacidad') {
+          document.getElementById('home-page').style.display = 'none';
+          document.getElementById('privacy-page').style.display = 'block';
+        } else {
+          document.getElementById('privacy-page').style.display = 'none';
+          document.getElementById('home-page').style.display = 'block';
+        }
+      });
+
+      // Detectar ruta inicial
+      if (window.location.pathname === '/privacidad') {
+        document.getElementById('home-page').style.display = 'none';
+        document.getElementById('privacy-page').style.display = 'block';
+      }
+    </script>
   </body>
 </html>

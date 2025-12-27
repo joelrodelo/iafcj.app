@@ -6,7 +6,7 @@
   "framework": "vite",
   "rewrites": [
     {
-      "source": "/((?!robots\\.txt|sitemap\\.xml|ads\\.txt|assets/).*)",
+      "source": "/((?!robots\\.txt|sitemap\\.xml|ads\\.txt|assets/|privacidad/).*)",
       "destination": "/index.html"
     }
   ]

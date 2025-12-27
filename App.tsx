@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BookOpen, Hammer, Globe, Music, Users, HeartHandshake } from 'lucide-react';
 import { ToolCard } from './components/ToolCard';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { Tool } from './types';
 
 const App: React.FC = () => {
+  // Inicializar el estado basado en la ruta actual
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(
+    currentPath === '/privacidad'
+  );
+
+  // Log para depuración
+  useEffect(() => {
+    console.log('Current path:', window.location.pathname);
+    console.log('Show privacy policy:', showPrivacyPolicy);
+  }, [showPrivacyPolicy]);
+
+  const handleShowPrivacy = () => {
+    setShowPrivacyPolicy(true);
+    window.history.pushState({}, '', '/privacidad');
+  };
+
+  const handleBack = () => {
+    setShowPrivacyPolicy(false);
+    window.history.pushState({}, '', '/');
+  };
+
+  // Escuchar cambios en la ruta (botón atrás/adelante del navegador)
+  useEffect(() => {
+    const handlePopState = () => {
+      setShowPrivacyPolicy(window.location.pathname === '/privacidad');
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
   const tools: Tool[] = [
     {
       id: 'himnario',
@@ -42,6 +74,10 @@ const App: React.FC = () => {
       status: 'coming_soon'
     }
   ];
+
+  if (showPrivacyPolicy) {
+    return <PrivacyPolicy onBack={handleBack} />;
+  }
 
   return (
     <div className="min-h-screen bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
@@ -95,7 +131,12 @@ const App: React.FC = () => {
         <footer className="mt-32 border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} IAFCJ App. Todos los derechos reservados.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-gray-600 transition-colors">Privacidad</a>
+            <button 
+              onClick={handleShowPrivacy}
+              className="hover:text-gray-600 transition-colors cursor-pointer bg-transparent border-none p-0 text-inherit font-inherit"
+            >
+              Privacidad
+            </button>
             <a href="#" className="hover:text-gray-600 transition-colors">Contacto</a>
             <a href="https://iafcj.org" target="_blank" rel="noreferrer" className="hover:text-gray-600 transition-colors">Sitio Oficial</a>
           </div>
