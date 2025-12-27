@@ -39,6 +39,25 @@
     </style>
   </head>
   <body class="min-h-screen bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+    <!-- Header / Navegación -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" onclick="showHome(event)" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-gray-900 text-white">
+            <span class="text-xs" aria-hidden="true">🤝</span>
+          </span>
+          <span class="text-sm font-semibold tracking-wide uppercase text-gray-900">
+            IAFCJ App
+          </span>
+        </a>
+        <div class="flex items-center space-x-6 text-sm">
+          <a href="/" onclick="showHome(event)" class="text-gray-600 hover:text-gray-900 transition-colors">Inicio</a>
+          <a href="/nosotros" onclick="showAbout(event)" class="text-gray-600 hover:text-gray-900 transition-colors">Nosotros</a>
+          <a href="http://himnario.iafcj.app/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors">Himnario ↗</a>
+        </div>
+      </div>
+    </nav>
+
     <!-- Background decoration -->
     <div class="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
       <div
@@ -49,20 +68,122 @@
       ></div>
     </div>
 
-    <!-- Página de Privacidad -->
-    <div id="privacy-page" class="relative z-10" style="display: none;">
-      <div class="max-w-4xl mx-auto px-6 py-12 md:py-24">
-        <div class="mb-8">
-          <a
-            href="/"
-            onclick="showHome(event)"
-            class="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors mb-6"
-          >
-            <span>←</span>
-            <span>Volver al inicio</span>
-          </a>
-        </div>
+    <!-- Página Nosotros -->
+    <div id="about-page" class="relative z-10 pt-20" style="display: none;">
+      <div class="max-w-4xl mx-auto px-6 py-12 md:py-16">
+        <article>
+          <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+            ¿Qué es IAFCJ App?
+          </h1>
+          
+          <p class="text-xl text-gray-600 leading-relaxed mb-12">
+            IAFCJ App es una iniciativa digital independiente, creada con el propósito de apoyar y facilitar el acceso a herramientas, recursos y contenidos útiles para la comunidad cristiana, utilizando la tecnología como medio de servicio.
+          </p>
 
+          <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-12 rounded-r-lg">
+            <p class="text-amber-800 text-sm">
+              Este proyecto no representa oficialmente a ninguna organización religiosa, iglesia o institución, y opera de manera autónoma.
+            </p>
+          </div>
+
+          <section class="mb-12">
+            <div class="flex items-center space-x-3 mb-6">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-100 text-blue-600">
+                <span class="text-lg">📖</span>
+              </span>
+              <h2 class="text-2xl font-semibold text-gray-900">Himnario Digital</h2>
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              El Himnario Digital IAFCJ es una herramienta diseñada para facilitar la consulta de cantos e himnos de forma práctica y organizada, apoyando actividades como:
+            </p>
+            <ul class="space-y-3 mb-4">
+              <li class="flex items-center space-x-3">
+                <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs">✓</span>
+                <span class="text-gray-700">Servicios religiosos</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs">✓</span>
+                <span class="text-gray-700">Ensayos de alabanza</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs">✓</span>
+                <span class="text-gray-700">Uso personal y comunitario</span>
+              </li>
+            </ul>
+            <p class="text-gray-600 text-sm italic">
+              Su objetivo es servir como apoyo digital, no como producto comercial ni plataforma de distribución oficial.
+            </p>
+          </section>
+
+          <section class="mb-12">
+            <div class="flex items-center space-x-3 mb-6">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-purple-100 text-purple-600">
+                <span class="text-lg">⚖️</span>
+              </span>
+              <h2 class="text-2xl font-semibold text-gray-900">Uso responsable del contenido</h2>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 space-y-4">
+              <p class="text-gray-700 leading-relaxed">
+                Todo el contenido se presenta con respeto a su finalidad espiritual y comunitaria.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Los derechos de autor pertenecen a sus respectivos titulares.
+              </p>
+              <p class="text-gray-600 text-sm">
+                Si algún contenido requiere corrección, actualización o retiro, puede solicitarse mediante los medios de contacto del sitio.
+              </p>
+            </div>
+          </section>
+
+          <section class="mb-12">
+            <div class="flex items-center space-x-3 mb-6">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-green-100 text-green-600">
+                <span class="text-lg">🎯</span>
+              </span>
+              <h2 class="text-2xl font-semibold text-gray-900">Nuestra misión</h2>
+            </div>
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
+              <p class="text-gray-800 leading-relaxed text-lg">
+                Utilizar la tecnología de manera responsable para apoyar, facilitar y fortalecer el acceso a recursos digitales que contribuyan al crecimiento y organización de la comunidad cristiana.
+              </p>
+            </div>
+          </section>
+
+          <section class="mb-12">
+            <div class="flex items-center space-x-3 mb-6">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-teal-100 text-teal-600">
+                <span class="text-lg">🔍</span>
+              </span>
+              <h2 class="text-2xl font-semibold text-gray-900">Transparencia</h2>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-700 leading-relaxed">
+                IAFCJ App puede mostrar anuncios publicitarios con el fin de apoyar el mantenimiento y operación de la plataforma.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                La publicidad no influye en el contenido espiritual, informativo o comunitario del sitio.
+              </p>
+            </div>
+          </section>
+
+          <section class="mb-8">
+            <div class="flex items-center space-x-3 mb-6">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-orange-100 text-orange-600">
+                <span class="text-lg">✉️</span>
+              </span>
+              <h2 class="text-2xl font-semibold text-gray-900">Contacto</h2>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              Para comentarios, sugerencias o aclaraciones, puedes utilizar los medios de contacto disponibles en el sitio.
+            </p>
+          </section>
+        </article>
+      </div>
+    </div>
+
+    <!-- Página de Privacidad -->
+    <div id="privacy-page" class="relative z-10 pt-20" style="display: none;">
+      <div class="max-w-4xl mx-auto px-6 py-12 md:py-16">
         <article>
           <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
             Política de Privacidad
@@ -185,19 +306,9 @@
     </div>
 
     <!-- Página Principal -->
-    <main id="home-page" class="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-24">
-      <!-- Header -->
+    <main id="home-page" class="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-12 md:pt-32 md:pb-24">
+      <!-- Hero -->
       <header class="mb-20 text-center md:text-left">
-        <div class="inline-flex items-center justify-center md:justify-start space-x-2 mb-6">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-gray-900 text-white">
-            <!-- Icono de corazón / comunidad -->
-            <span class="text-xs" aria-hidden="true">🤝</span>
-          </span>
-          <span class="text-sm font-semibold tracking-wide uppercase text-gray-500">
-            IAFCJ App
-          </span>
-        </div>
-
         <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
           Herramientas para la <br class="hidden md:block" />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">
@@ -339,59 +450,86 @@
         </div>
       </section>
 
-      <!-- Footer -->
-      <footer
-        class="mt-32 border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
-      >
-        <p>&copy; 2025 IAFCJ App. Todos los derechos reservados.</p>
-        <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="/privacidad" onclick="showPrivacy(event)" class="hover:text-gray-600 transition-colors cursor-pointer">Privacidad</a>
-          <a href="#" class="hover:text-gray-600 transition-colors">Contacto</a>
-          <a
-            href="https://iafcj.org"
-            target="_blank"
-            rel="noreferrer"
-            class="hover:text-gray-600 transition-colors"
-          >
-            Sitio Oficial
-          </a>
-        </div>
-      </footer>
     </main>
 
+    <!-- Footer Global -->
+    <footer class="relative z-10 border-t border-gray-100 bg-white">
+      <div class="max-w-5xl mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p>© <span id="current-year"></span> IAFCJ App. Todos los derechos reservados.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="/nosotros" onclick="showAbout(event)" class="hover:text-gray-600 transition-colors cursor-pointer">Nosotros</a>
+            <a href="/privacidad" onclick="showPrivacy(event)" class="hover:text-gray-600 transition-colors cursor-pointer">Privacidad</a>
+            <a
+              href="https://iafcj.org"
+              target="_blank"
+              rel="noreferrer"
+              class="hover:text-gray-600 transition-colors"
+            >
+              Sitio Oficial
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script>
-      function showPrivacy(event) {
-        if (event) event.preventDefault();
+      function hideAllPages() {
         document.getElementById('home-page').style.display = 'none';
-        document.getElementById('privacy-page').style.display = 'block';
-        window.history.pushState({page: 'privacy'}, '', '/privacidad');
-        window.scrollTo(0, 0);
+        document.getElementById('about-page').style.display = 'none';
+        document.getElementById('privacy-page').style.display = 'none';
       }
 
       function showHome(event) {
         if (event) event.preventDefault();
-        document.getElementById('privacy-page').style.display = 'none';
+        hideAllPages();
         document.getElementById('home-page').style.display = 'block';
         window.history.pushState({page: 'home'}, '', '/');
         window.scrollTo(0, 0);
       }
 
+      function showAbout(event) {
+        if (event) event.preventDefault();
+        hideAllPages();
+        document.getElementById('about-page').style.display = 'block';
+        window.history.pushState({page: 'about'}, '', '/nosotros');
+        window.scrollTo(0, 0);
+      }
+
+      function showPrivacy(event) {
+        if (event) event.preventDefault();
+        hideAllPages();
+        document.getElementById('privacy-page').style.display = 'block';
+        window.history.pushState({page: 'privacy'}, '', '/privacidad');
+        window.scrollTo(0, 0);
+      }
+
       // Manejar botón atrás/adelante del navegador
       window.addEventListener('popstate', function(event) {
+        hideAllPages();
         if (window.location.pathname === '/privacidad') {
-          document.getElementById('home-page').style.display = 'none';
           document.getElementById('privacy-page').style.display = 'block';
+        } else if (window.location.pathname === '/nosotros') {
+          document.getElementById('about-page').style.display = 'block';
         } else {
-          document.getElementById('privacy-page').style.display = 'none';
           document.getElementById('home-page').style.display = 'block';
         }
       });
 
       // Detectar ruta inicial
-      if (window.location.pathname === '/privacidad') {
-        document.getElementById('home-page').style.display = 'none';
-        document.getElementById('privacy-page').style.display = 'block';
-      }
+      (function() {
+        const path = window.location.pathname;
+        if (path === '/privacidad') {
+          hideAllPages();
+          document.getElementById('privacy-page').style.display = 'block';
+        } else if (path === '/nosotros') {
+          hideAllPages();
+          document.getElementById('about-page').style.display = 'block';
+        }
+      })();
+
+      // Actualizar año dinámicamente
+      document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
