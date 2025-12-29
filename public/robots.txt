@@ -1,10 +1,10 @@
 User-agent: *
+Allow: /
+Allow: /nosotros
+Allow: /privacidad
+Allow: /guia-himnario-digital
+Allow: /recursos-alabanza
+Allow: /organizacion-iglesia
+Allow: /tecnologia-iglesia
 
-Allow:
-
-
-
-
-
-
-
+Sitemap: https://iafcj.app/sitemap.xml
