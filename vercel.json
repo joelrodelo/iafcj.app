@@ -4,9 +4,46 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/privacidad/",
+      "destination": "/privacidad",
+      "permanent": true
+    },
+    {
+      "source": "/nosotros",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/nosotros/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/guia-himnario-digital",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/recursos-alabanza",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/organizacion-iglesia",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tecnologia-iglesia",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!robots\\.txt|sitemap\\.xml|ads\\.txt|assets/|privacidad/|nosotros/).*)",
+      "source": "/((?!robots\\.txt|sitemap\\.xml|ads\\.txt|assets/).*)",
       "destination": "/index.html"
     }
   ]

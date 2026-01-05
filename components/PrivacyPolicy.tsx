@@ -1,23 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { useSEO } from '../utils/useSEO';
 
 interface PrivacyPolicyProps {
-  onBack: () => void;
+  onBack?: () => void;
 }
 
 export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
+  useSEO({
+    title: 'Política de Privacidad - IAFCJ App',
+    description: 'Política de privacidad de IAFCJ App y Himnario Digital. Información sobre cómo manejamos tus datos.',
+    canonical: '/privacidad',
+  });
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <div className="max-w-4xl mx-auto px-6 py-12 md:py-24">
         {/* Header con botón de regreso */}
         <div className="mb-8">
-          <button
-            onClick={onBack}
+          <Link
+            to="/"
             className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors mb-6"
           >
             <ArrowLeft size={18} />
             <span>Volver al inicio</span>
-          </button>
+          </Link>
         </div>
 
         {/* Contenido */}

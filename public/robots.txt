@@ -6,5 +6,7 @@ Allow: /guia-himnario-digital
 Allow: /recursos-alabanza
 Allow: /organizacion-iglesia
 Allow: /tecnologia-iglesia
+Allow: /blog
+Allow: /blog/
 
 Sitemap: https://iafcj.app/sitemap.xml

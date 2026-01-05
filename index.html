@@ -114,6 +114,7 @@
         </a>
         <div class="flex items-center space-x-6 text-sm">
           <a href="/" onclick="showHome(event)" class="text-gray-600 hover:text-gray-900 transition-colors">Inicio</a>
+          <a href="/blog" onclick="showBlog(event)" class="text-gray-600 hover:text-gray-900 transition-colors">Blog</a>
           <a href="/nosotros" onclick="showAbout(event)" class="text-gray-600 hover:text-gray-900 transition-colors">Nosotros</a>
           <a href="http://himnario.iafcj.app/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors">Himnario ↗</a>
         </div>
@@ -665,6 +666,104 @@
         </div>
       </section>
 
+      <!-- Sección: Blog Reciente -->
+      <section aria-labelledby="blog-heading" class="mb-20">
+        <div class="flex items-center justify-between mb-8">
+          <div class="flex items-center space-x-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-gray-100">
+              <span class="text-xs text-gray-500" aria-hidden="true">📝</span>
+            </span>
+            <h2
+              id="blog-heading"
+              class="text-sm font-semibold text-gray-500 uppercase tracking-wider"
+            >
+              Últimas Noticias
+            </h2>
+          </div>
+          <a
+            href="/blog"
+            onclick="showBlog(event)"
+            class="text-sm text-blue-600 hover:text-blue-800 font-medium"
+          >
+            Ver todo el blog →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a
+            href="/blog/lanzamiento-himnario-digital"
+            onclick="showBlogPost(event, 'lanzamiento-himnario-digital')"
+            class="block p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-300 group"
+          >
+            <div class="flex items-center space-x-2 mb-3">
+              <span class="text-xs text-gray-500">27 de enero, 2025</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-xs text-blue-600 font-medium">Lanzamiento</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 text-gray-900 group-hover:text-blue-900">
+              Lanzamiento del Himnario Digital IAFCJ
+            </h3>
+            <p class="text-sm leading-relaxed text-gray-500">
+              Estamos emocionados de anunciar el lanzamiento oficial del Himnario Digital, una herramienta diseñada para facilitar el acceso a los himnos y coros de la IAFCJ.
+            </p>
+          </a>
+
+          <a
+            href="/blog/nuevas-funcionalidades-himnario"
+            onclick="showBlogPost(event, 'nuevas-funcionalidades-himnario')"
+            class="block p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-300 group"
+          >
+            <div class="flex items-center space-x-2 mb-3">
+              <span class="text-xs text-gray-500">25 de enero, 2025</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-xs text-green-600 font-medium">Actualización</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 text-gray-900 group-hover:text-blue-900">
+              Nuevas Funcionalidades en el Himnario Digital
+            </h3>
+            <p class="text-sm leading-relaxed text-gray-500">
+              Hemos agregado mejoras significativas al Himnario Digital, incluyendo búsqueda avanzada y mejor organización de contenido.
+            </p>
+          </a>
+
+          <a
+            href="/blog/proximas-herramientas"
+            onclick="showBlogPost(event, 'proximas-herramientas')"
+            class="block p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-300 group"
+          >
+            <div class="flex items-center space-x-2 mb-3">
+              <span class="text-xs text-gray-500">20 de enero, 2025</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-xs text-purple-600 font-medium">Desarrollo</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 text-gray-900 group-hover:text-blue-900">
+              Próximas Herramientas en Desarrollo
+            </h3>
+            <p class="text-sm leading-relaxed text-gray-500">
+              Te contamos sobre las nuevas herramientas que estamos desarrollando para servir mejor a la comunidad IAFCJ.
+            </p>
+          </a>
+
+          <a
+            href="/blog/mejoras-plataforma"
+            onclick="showBlogPost(event, 'mejoras-plataforma')"
+            class="block p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-300 group"
+          >
+            <div class="flex items-center space-x-2 mb-3">
+              <span class="text-xs text-gray-500">15 de enero, 2025</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-xs text-orange-600 font-medium">Mejoras</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 text-gray-900 group-hover:text-blue-900">
+              Mejoras Continuas en la Plataforma
+            </h3>
+            <p class="text-sm leading-relaxed text-gray-500">
+              Nuestro compromiso con la mejora continua: cómo estamos optimizando la experiencia de usuario y agregando nuevo contenido valioso.
+            </p>
+          </a>
+        </div>
+      </section>
+
       <!-- Sección: Información sobre IAFCJ -->
       <section aria-labelledby="about-iafcj-heading" class="mb-20">
         <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12 border border-blue-100">
@@ -707,6 +806,7 @@
         <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© <span id="current-year"></span> IAFCJ App. Todos los derechos reservados.</p>
           <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="/blog" onclick="showBlog(event)" class="hover:text-gray-600 transition-colors cursor-pointer">Blog</a>
             <a href="/nosotros" onclick="showAbout(event)" class="hover:text-gray-600 transition-colors cursor-pointer">Nosotros</a>
             <a href="/privacidad" onclick="showPrivacy(event)" class="hover:text-gray-600 transition-colors cursor-pointer">Privacidad</a>
             <a
@@ -721,6 +821,683 @@
         </div>
       </div>
     </footer>
+
+    <!-- Página: Blog -->
+    <div id="blog-page" class="relative z-10 pt-20" style="display: none;">
+      <div class="max-w-5xl mx-auto px-6 py-12 md:py-16">
+        <a href="/" onclick="showHome(event)" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 text-sm font-medium">
+          ← Volver al inicio
+        </a>
+        
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            Blog de IAFCJ App
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Noticias, actualizaciones y contenido sobre nuestras herramientas, desarrollo y recursos para la comunidad IAFCJ.
+          </p>
+        </header>
+
+        <div class="space-y-8">
+          <!-- Post 1 -->
+          <article class="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow">
+            <div class="flex items-center space-x-2 mb-4">
+              <span class="text-sm text-gray-500">27 de enero, 2025</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-sm text-blue-600 font-medium">Lanzamiento</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-3 text-gray-900">
+              <a href="/blog/lanzamiento-himnario-digital" onclick="showBlogPost(event, 'lanzamiento-himnario-digital')" class="hover:text-blue-600 transition-colors">
+                Lanzamiento del Himnario Digital IAFCJ
+              </a>
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Estamos emocionados de anunciar el lanzamiento oficial del Himnario Digital IAFCJ, una herramienta diseñada para facilitar el acceso a los himnos y coros utilizados en los servicios de la Iglesia Apostólica de la Fe en Cristo Jesús. Esta plataforma representa meses de trabajo y nuestro compromiso de servir a la comunidad con herramientas digitales útiles y accesibles.
+            </p>
+            <a
+              href="/blog/lanzamiento-himnario-digital"
+              onclick="showBlogPost(event, 'lanzamiento-himnario-digital')"
+              class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+            >
+              Leer más →
+            </a>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow">
+            <div class="flex items-center space-x-2 mb-4">
+              <span class="text-sm text-gray-500">25 de enero, 2025</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-sm text-green-600 font-medium">Actualización</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-3 text-gray-900">
+              <a href="/blog/nuevas-funcionalidades-himnario" onclick="showBlogPost(event, 'nuevas-funcionalidades-himnario')" class="hover:text-blue-600 transition-colors">
+                Nuevas Funcionalidades en el Himnario Digital
+              </a>
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Basándonos en el feedback de nuestros usuarios, hemos implementado varias mejoras significativas al Himnario Digital. Estas actualizaciones incluyen mejoras en la búsqueda, organización de contenido y experiencia de usuario en dispositivos móviles.
+            </p>
+            <a
+              href="/blog/nuevas-funcionalidades-himnario"
+              onclick="showBlogPost(event, 'nuevas-funcionalidades-himnario')"
+              class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+            >
+              Leer más →
+            </a>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow">
+            <div class="flex items-center space-x-2 mb-4">
+              <span class="text-sm text-gray-500">20 de enero, 2025</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-sm text-purple-600 font-medium">Desarrollo</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-3 text-gray-900">
+              <a href="/blog/proximas-herramientas" onclick="showBlogPost(event, 'proximas-herramientas')" class="hover:text-blue-600 transition-colors">
+                Próximas Herramientas en Desarrollo
+              </a>
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              El Himnario Digital es solo el comienzo. Estamos trabajando en varias herramientas adicionales que ayudarán a las congregaciones y líderes de la IAFCJ. En este artículo, compartimos un vistazo a lo que viene y cómo estas herramientas servirán a la comunidad.
+            </p>
+            <a
+              href="/blog/proximas-herramientas"
+              onclick="showBlogPost(event, 'proximas-herramientas')"
+              class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+            >
+              Leer más →
+            </a>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow">
+            <div class="flex items-center space-x-2 mb-4">
+              <span class="text-sm text-gray-500">15 de enero, 2025</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-sm text-orange-600 font-medium">Mejoras</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-3 text-gray-900">
+              <a href="/blog/mejoras-plataforma" onclick="showBlogPost(event, 'mejoras-plataforma')" class="hover:text-blue-600 transition-colors">
+                Mejoras Continuas en la Plataforma
+              </a>
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Nuestro compromiso con la excelencia significa mejora continua. En este artículo, explicamos cómo estamos optimizando la experiencia de usuario, agregando nuevo contenido valioso y asegurando que nuestras herramientas sean accesibles y útiles para todos.
+            </p>
+            <a
+              href="/blog/mejoras-plataforma"
+              onclick="showBlogPost(event, 'mejoras-plataforma')"
+              class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+            >
+              Leer más →
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post: Lanzamiento del Himnario Digital -->
+    <div id="blog-post-lanzamiento-himnario-digital" class="relative z-10 pt-20" style="display: none;">
+      <div class="max-w-4xl mx-auto px-6 py-12 md:py-16">
+        <article>
+          <a href="/blog" onclick="showBlog(event)" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 text-sm font-medium">
+            ← Volver al blog
+          </a>
+          
+          <div class="flex items-center space-x-2 mb-6">
+            <span class="text-sm text-gray-500">27 de enero, 2025</span>
+            <span class="text-gray-300">•</span>
+            <span class="text-sm text-blue-600 font-medium bg-blue-50 px-3 py-1 rounded-full">Lanzamiento</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+            Lanzamiento del Himnario Digital IAFCJ
+          </h1>
+          
+          <div class="prose prose-lg max-w-none">
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+              Estamos emocionados de anunciar el lanzamiento oficial del <strong>Himnario Digital IAFCJ</strong>, una herramienta diseñada para facilitar el acceso a los himnos y coros utilizados en los servicios de la Iglesia Apostólica de la Fe en Cristo Jesús.
+            </p>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Un Proyecto con Propósito</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                El desarrollo del Himnario Digital comenzó con una necesidad simple pero importante: facilitar el acceso a los himnos y coros que forman parte integral de la adoración en la IAFCJ. Durante meses, hemos trabajado para crear una plataforma que sea tanto funcional como accesible, manteniendo siempre en mente nuestro propósito de servir a la comunidad.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Este proyecto representa más que una simple herramienta digital; es una expresión de nuestro compromiso de utilizar la tecnología para fortalecer el ministerio y facilitar el acceso a recursos espirituales valiosos.
+              </p>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Características Principales</h2>
+              
+              <div class="space-y-6">
+                <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">🔍 Búsqueda Avanzada</h3>
+                  <p class="text-gray-700 leading-relaxed">
+                    Nuestro sistema de búsqueda permite encontrar himnos por título, número, autor o incluso por palabras clave contenidas en la letra. Esto hace que encontrar el himno correcto sea rápido y sencillo, incluso cuando solo recuerdas una frase.
+                  </p>
+                </div>
+
+                <div class="bg-green-50 rounded-xl p-6 border border-green-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">📱 Diseño Responsivo</h3>
+                  <p class="text-gray-700 leading-relaxed">
+                    El himnario está completamente optimizado para funcionar en cualquier dispositivo: teléfonos móviles, tablets y computadoras. La interfaz se adapta automáticamente al tamaño de la pantalla, garantizando una experiencia de lectura cómoda en cualquier situación.
+                  </p>
+                </div>
+
+                <div class="bg-purple-50 rounded-xl p-6 border border-purple-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">🎵 Letras y Acordes Completos</h3>
+                  <p class="text-gray-700 leading-relaxed">
+                    Cada himno incluye la letra completa y los acordes musicales, facilitando tanto el canto como la interpretación con instrumentos. Esto es especialmente valioso para equipos de alabanza que necesitan preparar repertorios.
+                  </p>
+                </div>
+
+                <div class="bg-orange-50 rounded-xl p-6 border border-orange-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">📚 Organización por Categorías</h3>
+                  <p class="text-gray-700 leading-relaxed">
+                    Los himnos están organizados en categorías temáticas que facilitan la navegación y ayudan a los directores de culto a seleccionar himnos apropiados para diferentes momentos del servicio.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Para Quién es Esta Herramienta</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                El Himnario Digital está diseñado para servir a diversos miembros de la comunidad IAFCJ:
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
+                <li><strong>Directores de Alabanza:</strong> Para planificar repertorios y acceder rápidamente a letras y acordes durante los servicios</li>
+                <li><strong>Equipos de Música:</strong> Para preparar ensayos y tener acceso a acordes y letras durante las presentaciones</li>
+                <li><strong>Miembros de la Congregación:</strong> Para uso personal durante devocionales o para seguir los himnos durante los servicios</li>
+                <li><strong>Líderes y Pastores:</strong> Para seleccionar himnos apropiados para diferentes ocasiones y temas</li>
+              </ul>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Nuestro Compromiso</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                El lanzamiento del Himnario Digital es solo el comienzo. Estamos comprometidos a:
+              </p>
+              <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100 space-y-3">
+                <div class="flex items-start space-x-3">
+                  <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs mt-0.5">✓</span>
+                  <span class="text-gray-700">Mejorar continuamente la herramienta basándonos en el feedback de los usuarios</span>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs mt-0.5">✓</span>
+                  <span class="text-gray-700">Mantener el contenido actualizado y preciso</span>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs mt-0.5">✓</span>
+                  <span class="text-gray-700">Agregar nuevas funcionalidades que agreguen valor real</span>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs mt-0.5">✓</span>
+                  <span class="text-gray-700">Mantener la herramienta accesible y gratuita para la comunidad</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-8">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Cómo Acceder</h2>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                El Himnario Digital está disponible ahora mismo en <a href="http://himnario.iafcj.app/" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-semibold">himnario.iafcj.app</a>. No requiere registro ni instalación; simplemente accede desde cualquier navegador web en tu dispositivo preferido.
+              </p>
+              <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  <strong>¿Tienes sugerencias o comentarios?</strong> Tu feedback es invaluable para nosotros. Si encuentras algún error, tienes una sugerencia de mejora, o simplemente quieres compartir cómo estás usando la herramienta, no dudes en contactarnos.
+                </p>
+              </div>
+            </section>
+
+            <div class="mt-12 pt-8 border-t border-gray-200">
+              <a
+                href="http://himnario.iafcj.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium mr-4"
+              >
+                Acceder al Himnario Digital →
+              </a>
+              <a
+                href="/blog"
+                onclick="showBlog(event)"
+                class="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+              >
+                Ver más artículos
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Post: Nuevas Funcionalidades -->
+    <div id="blog-post-nuevas-funcionalidades-himnario" class="relative z-10 pt-20" style="display: none;">
+      <div class="max-w-4xl mx-auto px-6 py-12 md:py-16">
+        <article>
+          <a href="/blog" onclick="showBlog(event)" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 text-sm font-medium">
+            ← Volver al blog
+          </a>
+          
+          <div class="flex items-center space-x-2 mb-6">
+            <span class="text-sm text-gray-500">25 de enero, 2025</span>
+            <span class="text-gray-300">•</span>
+            <span class="text-sm text-green-600 font-medium bg-green-50 px-3 py-1 rounded-full">Actualización</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+            Nuevas Funcionalidades en el Himnario Digital
+          </h1>
+          
+          <div class="prose prose-lg max-w-none">
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+              Basándonos en el valioso feedback de nuestros usuarios, hemos implementado varias mejoras significativas al Himnario Digital. Estas actualizaciones están diseñadas para hacer la herramienta aún más útil y fácil de usar.
+            </p>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Mejoras en la Búsqueda</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Hemos mejorado significativamente nuestro sistema de búsqueda para hacerlo más rápido y preciso. Ahora puedes:
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
+                <li>Buscar por frases exactas usando comillas</li>
+                <li>Filtrar resultados por categoría mientras buscas</li>
+                <li>Ver sugerencias mientras escribes</li>
+                <li>Acceder a búsquedas recientes rápidamente</li>
+              </ul>
+              <p class="text-gray-700 leading-relaxed">
+                Estas mejoras hacen que encontrar el himno correcto sea aún más rápido, especialmente útil durante los servicios cuando necesitas acceso inmediato.
+              </p>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Mejor Organización de Contenido</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Hemos reorganizado y mejorado la estructura del contenido para facilitar la navegación:
+              </p>
+              <div class="bg-blue-50 rounded-xl p-6 border border-blue-100 mb-4">
+                <h3 class="text-lg font-semibold mb-3 text-gray-900">Nuevas Categorías</h3>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                  Hemos agregado nuevas categorías temáticas que ayudan a organizar mejor los himnos según su propósito y contenido. Esto facilita que los directores de culto encuentren himnos apropiados para diferentes momentos del servicio.
+                </p>
+              </div>
+              <div class="bg-green-50 rounded-xl p-6 border border-green-100">
+                <h3 class="text-lg font-semibold mb-3 text-gray-900">Navegación Mejorada</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  La navegación entre himnos ahora es más intuitiva, con enlaces relacionados y sugerencias de himnos similares que pueden ser útiles para planificar repertorios coherentes.
+                </p>
+              </div>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Optimización para Móviles</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Hemos realizado mejoras significativas en la experiencia móvil:
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
+                <li><strong>Carga más rápida:</strong> Optimizamos el rendimiento para que el himnario cargue más rápido en conexiones móviles</li>
+                <li><strong>Mejor visualización:</strong> Mejoramos el tamaño de fuente y espaciado para lectura en pantallas pequeñas</li>
+                <li><strong>Navegación táctil:</strong> Optimizamos los botones y enlaces para uso táctil</li>
+                <li><strong>Modo offline básico:</strong> Estamos trabajando en funcionalidades que permitan acceso básico sin conexión</li>
+              </ul>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Correcciones y Mejoras Técnicas</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Además de las nuevas funcionalidades, hemos realizado numerosas correcciones y mejoras técnicas:
+              </p>
+              <div class="bg-gray-50 rounded-xl p-6 space-y-3">
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Corrección de Errores</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    Corregimos varios errores menores reportados por usuarios, incluyendo problemas de visualización en ciertos navegadores y correcciones en algunos textos de himnos.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Mejoras de Rendimiento</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    Optimizamos el código para mejorar la velocidad de carga y reducir el uso de datos, especialmente importante para usuarios con conexiones limitadas.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Accesibilidad</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    Mejoramos la accesibilidad del sitio para usuarios con diferentes necesidades, incluyendo mejor contraste de colores y soporte para lectores de pantalla.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-8">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Próximas Mejoras</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Estamos trabajando en varias mejoras adicionales que esperamos lanzar en los próximos meses:
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                <li>Sistema de favoritos para guardar himnos frecuentemente usados</li>
+                <li>Funcionalidad de compartir himnos específicos</li>
+                <li>Mejoras en la visualización de acordes</li>
+                <li>Integración con herramientas de planificación de servicios</li>
+              </ul>
+            </section>
+
+            <div class="mt-12 pt-8 border-t border-gray-200 bg-blue-50 rounded-xl p-6">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>Tu feedback es importante:</strong> Estas mejoras fueron posibles gracias a los comentarios y sugerencias de usuarios como tú. Si tienes ideas adicionales o encuentras algún problema, no dudes en contactarnos.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Post: Próximas Herramientas -->
+    <div id="blog-post-proximas-herramientas" class="relative z-10 pt-20" style="display: none;">
+      <div class="max-w-4xl mx-auto px-6 py-12 md:py-16">
+        <article>
+          <a href="/blog" onclick="showBlog(event)" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 text-sm font-medium">
+            ← Volver al blog
+          </a>
+          
+          <div class="flex items-center space-x-2 mb-6">
+            <span class="text-sm text-gray-500">20 de enero, 2025</span>
+            <span class="text-gray-300">•</span>
+            <span class="text-sm text-purple-600 font-medium bg-purple-50 px-3 py-1 rounded-full">Desarrollo</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+            Próximas Herramientas en Desarrollo
+          </h1>
+          
+          <div class="prose prose-lg max-w-none">
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+              El Himnario Digital es solo el comienzo de nuestra visión para servir a la comunidad IAFCJ. Estamos trabajando activamente en varias herramientas adicionales que ayudarán a las congregaciones y líderes de diferentes maneras.
+            </p>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Nuestra Visión</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Nuestra visión es crear un ecosistema completo de herramientas digitales que faciliten el ministerio, la organización y el crecimiento espiritual. Cada herramienta está diseñada para resolver necesidades específicas que hemos identificado en la comunidad IAFCJ.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Todas nuestras herramientas comparten principios fundamentales: son accesibles, fáciles de usar, y están diseñadas para servir, no para generar ganancias.
+              </p>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Herramientas en Desarrollo</h2>
+              
+              <div class="space-y-6">
+                <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">🎵 Liturgia y Recursos</h3>
+                  <p class="text-gray-700 leading-relaxed mb-3">
+                    Estamos desarrollando una herramienta completa para directores de culto que incluirá:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>Guías para la estructura de servicios</li>
+                    <li>Lecturas bíblicas sugeridas por tema</li>
+                    <li>Plantillas para orden del servicio</li>
+                    <li>Recursos para servicios especiales (bautismos, bodas, etc.)</li>
+                    <li>Calendario litúrgico integrado</li>
+                  </ul>
+                  <p class="text-gray-600 text-sm mt-3 italic">
+                    Estado: En desarrollo activo - Lanzamiento estimado: Segundo trimestre 2025
+                  </p>
+                </div>
+
+                <div class="bg-green-50 rounded-xl p-6 border border-green-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">🌍 Directorio de Iglesias</h3>
+                  <p class="text-gray-700 leading-relaxed mb-3">
+                    Una herramienta para ayudar a las personas a encontrar congregaciones de la IAFCJ:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>Búsqueda por ubicación</li>
+                    <li>Información de contacto y horarios</li>
+                    <li>Mapas interactivos</li>
+                    <li>Información sobre servicios y actividades</li>
+                    <li>Perfiles de congregaciones</li>
+                  </ul>
+                  <p class="text-gray-600 text-sm mt-3 italic">
+                    Estado: Planificación - Lanzamiento estimado: Tercer trimestre 2025
+                  </p>
+                </div>
+
+                <div class="bg-purple-50 rounded-xl p-6 border border-purple-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">👥 Portal de Liderazgo</h3>
+                  <p class="text-gray-700 leading-relaxed mb-3">
+                    Una plataforma exclusiva para pastores y líderes con recursos especializados:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>Recursos de capacitación y desarrollo</li>
+                    <li>Herramientas de administración eclesiástica</li>
+                    <li>Comunidad y networking entre líderes</li>
+                    <li>Recursos bibliográficos y materiales de estudio</li>
+                    <li>Herramientas de planificación y gestión</li>
+                  </ul>
+                  <p class="text-gray-600 text-sm mt-3 italic">
+                    Estado: Investigación y diseño - Lanzamiento estimado: Cuarto trimestre 2025
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Cómo Priorizamos el Desarrollo</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Nuestro proceso de desarrollo está guiado por varios factores:
+              </p>
+              <div class="bg-gray-50 rounded-xl p-6 space-y-4">
+                <div>
+                  <h3 class="text-lg font-semibold mb-2 text-gray-900">Necesidad de la Comunidad</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    Priorizamos herramientas que resuelven necesidades reales y frecuentes expresadas por miembros de la comunidad IAFCJ.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2 text-gray-900">Factibilidad Técnica</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    Consideramos los recursos disponibles y la complejidad técnica para asegurar que podemos entregar herramientas de calidad.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2 text-gray-900">Impacto Potencial</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    Evaluamos cuántas personas se beneficiarían y qué tan significativo sería el impacto en el ministerio y la comunidad.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-8">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Cómo Puedes Contribuir</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Tu input es invaluable para nuestro proceso de desarrollo:
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
+                <li><strong>Comparte tus necesidades:</strong> ¿Qué herramientas te ayudarían más en tu ministerio o congregación?</li>
+                <li><strong>Proporciona feedback:</strong> Cuando probamos nuevas funcionalidades, tu opinión nos ayuda a mejorar</li>
+                <li><strong>Reporta problemas:</strong> Si encuentras errores o áreas de mejora, háznoslo saber</li>
+                <li><strong>Difunde la palabra:</strong> Comparte nuestras herramientas con otros que puedan beneficiarse</li>
+              </ul>
+              <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100 mt-6">
+                <p class="text-gray-800 leading-relaxed">
+                  <strong>Nota importante:</strong> Todas las fechas de lanzamiento son estimaciones y pueden cambiar según el progreso del desarrollo y las necesidades de la comunidad. Mantente al día siguiendo nuestro blog para actualizaciones regulares.
+                </p>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Post: Mejoras en la Plataforma -->
+    <div id="blog-post-mejoras-plataforma" class="relative z-10 pt-20" style="display: none;">
+      <div class="max-w-4xl mx-auto px-6 py-12 md:py-16">
+        <article>
+          <a href="/blog" onclick="showBlog(event)" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 text-sm font-medium">
+            ← Volver al blog
+          </a>
+          
+          <div class="flex items-center space-x-2 mb-6">
+            <span class="text-sm text-gray-500">15 de enero, 2025</span>
+            <span class="text-gray-300">•</span>
+            <span class="text-sm text-orange-600 font-medium bg-orange-50 px-3 py-1 rounded-full">Mejoras</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+            Mejoras Continuas en la Plataforma
+          </h1>
+          
+          <div class="prose prose-lg max-w-none">
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+              En IAFCJ App, creemos firmemente en la mejora continua. Nuestro compromiso con la excelencia significa que nunca estamos satisfechos con el status quo; siempre estamos buscando formas de hacer nuestras herramientas mejores, más útiles y más accesibles.
+            </p>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Nuestro Enfoque en la Mejora</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                La mejora continua no es solo un concepto para nosotros; es una práctica diaria. Cada semana, evaluamos cómo podemos mejorar nuestras herramientas existentes y qué nuevo contenido o funcionalidades agregarían valor real para nuestros usuarios.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Este enfoque se refleja en actualizaciones regulares, corrección proactiva de problemas, y la adición constante de contenido valioso que ayuda a la comunidad IAFCJ.
+              </p>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Mejoras Recientes en el Sitio Principal</h2>
+              
+              <div class="space-y-6">
+                <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">📚 Nuevo Contenido Educativo</h3>
+                  <p class="text-gray-700 leading-relaxed mb-3">
+                    Hemos agregado varias guías completas y recursos educativos:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>Guía completa del Himnario Digital</li>
+                    <li>Recursos para el Ministerio de Alabanza</li>
+                    <li>Guías de Organización Eclesiástica</li>
+                    <li>Artículos sobre Tecnología para la Iglesia</li>
+                  </ul>
+                  <p class="text-gray-700 leading-relaxed mt-3">
+                    Este contenido está diseñado para ser práctico, útil y directamente aplicable al ministerio y la vida de la iglesia.
+                  </p>
+                </div>
+
+                <div class="bg-green-50 rounded-xl p-6 border border-green-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">🔍 Mejoras en SEO y Descubribilidad</h3>
+                  <p class="text-gray-700 leading-relaxed">
+                    Hemos mejorado significativamente la optimización para motores de búsqueda, lo que significa que más personas pueden encontrar nuestros recursos cuando buscan información relevante. Esto incluye mejor estructura de datos, meta tags optimizados, y un sitemap completo.
+                  </p>
+                </div>
+
+                <div class="bg-purple-50 rounded-xl p-6 border border-purple-100">
+                  <h3 class="text-xl font-semibold mb-3 text-gray-900">📱 Experiencia de Usuario Mejorada</h3>
+                  <p class="text-gray-700 leading-relaxed">
+                    Hemos refinado la navegación y la estructura del sitio para hacerlo más intuitivo y fácil de usar. Los usuarios ahora pueden encontrar información más rápidamente y navegar entre diferentes secciones con mayor facilidad.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Nuevo Blog</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Una de las mejoras más significativas recientes es el lanzamiento de nuestro blog. Este espacio nos permite:
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
+                <li>Compartir actualizaciones sobre nuestras herramientas</li>
+                <li>Anunciar nuevas funcionalidades y mejoras</li>
+                <li>Proporcionar contenido educativo adicional</li>
+                <li>Mantener a la comunidad informada sobre nuestro progreso</li>
+                <li>Compartir recursos y consejos útiles</li>
+              </ul>
+              <p class="text-gray-700 leading-relaxed">
+                El blog es también una forma de demostrar nuestro compromiso con la transparencia y la comunicación abierta con la comunidad que servimos.
+              </p>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Cómo Medimos el Éxito</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Para nosotros, el éxito no se mide solo en números, sino en el impacto real que tenemos:
+              </p>
+              <div class="bg-gray-50 rounded-xl p-6 space-y-4">
+                <div>
+                  <h3 class="text-lg font-semibold mb-2 text-gray-900">Feedback de Usuarios</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    Valoramos profundamente los comentarios de quienes usan nuestras herramientas. Cada sugerencia, cada reporte de problema, y cada palabra de agradecimiento nos ayuda a entender cómo estamos sirviendo a la comunidad.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2 text-gray-900">Uso Real</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    Observamos cómo se utilizan nuestras herramientas en la práctica. ¿Están siendo útiles? ¿Resuelven problemas reales? ¿Facilitan el ministerio? Estas son las preguntas que realmente importan.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2 text-gray-900">Mejora Continua</h3>
+                  <p class="text-gray-700 leading-relaxed text-sm">
+                    El éxito para nosotros significa que nunca nos detenemos. Siempre hay algo que mejorar, algo que agregar, alguna forma de servir mejor.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-10">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Próximas Mejoras Planificadas</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Estamos trabajando en varias mejoras adicionales:
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                <li>Expansión del contenido del blog con más artículos y recursos</li>
+                <li>Mejoras en la velocidad y rendimiento del sitio</li>
+                <li>Nuevas secciones de recursos y herramientas</li>
+                <li>Mejoras en la accesibilidad y compatibilidad</li>
+                <li>Integración de más herramientas útiles</li>
+              </ul>
+            </section>
+
+            <section class="mb-8">
+              <h2 class="text-3xl font-semibold mb-6 text-gray-900">Tu Rol en Nuestro Crecimiento</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Las mejoras que hacemos no ocurren en un vacío; están directamente influenciadas por las necesidades y feedback de la comunidad. Tu participación es esencial:
+              </p>
+              <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100 space-y-3">
+                <div class="flex items-start space-x-3">
+                  <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs mt-0.5">💬</span>
+                  <span class="text-gray-700">Comparte tus ideas y sugerencias</span>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs mt-0.5">🐛</span>
+                  <span class="text-gray-700">Reporta problemas o errores que encuentres</span>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs mt-0.5">📢</span>
+                  <span class="text-gray-700">Comparte nuestras herramientas con otros que puedan beneficiarse</span>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs mt-0.5">❤️</span>
+                  <span class="text-gray-700">Úsanos regularmente - tu uso nos ayuda a entender qué es más valioso</span>
+                </div>
+              </div>
+            </section>
+
+            <div class="mt-12 pt-8 border-t border-gray-200">
+              <p class="text-gray-700 leading-relaxed text-center">
+                Gracias por ser parte de esta comunidad y por ayudarnos a mejorar continuamente. Juntos, estamos construyendo herramientas que realmente sirven a la iglesia.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
 
     <!-- Página: Recursos para el Ministerio de Alabanza -->
     <div id="guide-alabanza-page" class="relative z-10 pt-20" style="display: none;">
@@ -1475,10 +2252,16 @@
         document.getElementById('home-page').style.display = 'none';
         document.getElementById('about-page').style.display = 'none';
         document.getElementById('privacy-page').style.display = 'none';
+        document.getElementById('blog-page').style.display = 'none';
         document.getElementById('guide-himnario-page').style.display = 'none';
         document.getElementById('guide-alabanza-page').style.display = 'none';
         document.getElementById('guide-organizacion-page').style.display = 'none';
         document.getElementById('guide-tecnologia-page').style.display = 'none';
+        // Ocultar todos los posts del blog
+        const blogPosts = document.querySelectorAll('[id^="blog-post-"]');
+        blogPosts.forEach(post => {
+          post.style.display = 'none';
+        });
       }
 
       function showHome(event) {
@@ -1503,6 +2286,31 @@
         document.getElementById('privacy-page').style.display = 'block';
         window.history.pushState({page: 'privacy'}, '', '/privacidad');
         window.scrollTo(0, 0);
+      }
+
+      function showBlog(event) {
+        if (event) event.preventDefault();
+        hideAllPages();
+        document.getElementById('blog-page').style.display = 'block';
+        window.history.pushState({page: 'blog'}, '', '/blog');
+        window.scrollTo(0, 0);
+      }
+
+      function showBlogPost(event, postId) {
+        if (event) event.preventDefault();
+        hideAllPages();
+        const postElement = document.getElementById('blog-post-' + postId);
+        if (postElement) {
+          postElement.style.display = 'block';
+          const pathMap = {
+            'lanzamiento-himnario-digital': '/blog/lanzamiento-himnario-digital',
+            'nuevas-funcionalidades-himnario': '/blog/nuevas-funcionalidades-himnario',
+            'proximas-herramientas': '/blog/proximas-herramientas',
+            'mejoras-plataforma': '/blog/mejoras-plataforma'
+          };
+          window.history.pushState({page: 'blog-post', postId: postId}, '', pathMap[postId] || '/blog');
+          window.scrollTo(0, 0);
+        }
       }
 
       function showGuide(event, guideType) {
@@ -1531,6 +2339,16 @@
           document.getElementById('privacy-page').style.display = 'block';
         } else if (path === '/nosotros') {
           document.getElementById('about-page').style.display = 'block';
+        } else if (path === '/blog') {
+          document.getElementById('blog-page').style.display = 'block';
+        } else if (path === '/blog/lanzamiento-himnario-digital') {
+          document.getElementById('blog-post-lanzamiento-himnario-digital').style.display = 'block';
+        } else if (path === '/blog/nuevas-funcionalidades-himnario') {
+          document.getElementById('blog-post-nuevas-funcionalidades-himnario').style.display = 'block';
+        } else if (path === '/blog/proximas-herramientas') {
+          document.getElementById('blog-post-proximas-herramientas').style.display = 'block';
+        } else if (path === '/blog/mejoras-plataforma') {
+          document.getElementById('blog-post-mejoras-plataforma').style.display = 'block';
         } else if (path === '/guia-himnario-digital') {
           document.getElementById('guide-himnario-page').style.display = 'block';
         } else if (path === '/recursos-alabanza') {
@@ -1552,6 +2370,16 @@
           document.getElementById('privacy-page').style.display = 'block';
         } else if (path === '/nosotros') {
           document.getElementById('about-page').style.display = 'block';
+        } else if (path === '/blog') {
+          document.getElementById('blog-page').style.display = 'block';
+        } else if (path === '/blog/lanzamiento-himnario-digital') {
+          document.getElementById('blog-post-lanzamiento-himnario-digital').style.display = 'block';
+        } else if (path === '/blog/nuevas-funcionalidades-himnario') {
+          document.getElementById('blog-post-nuevas-funcionalidades-himnario').style.display = 'block';
+        } else if (path === '/blog/proximas-herramientas') {
+          document.getElementById('blog-post-proximas-herramientas').style.display = 'block';
+        } else if (path === '/blog/mejoras-plataforma') {
+          document.getElementById('blog-post-mejoras-plataforma').style.display = 'block';
         } else if (path === '/guia-himnario-digital') {
           document.getElementById('guide-himnario-page').style.display = 'block';
         } else if (path === '/recursos-alabanza') {
