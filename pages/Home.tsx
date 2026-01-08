@@ -77,8 +77,12 @@ export const Home: React.FC = () => {
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto md:mx-0 leading-relaxed mb-6">
             Una suite centralizada de utilidades digitales diseñadas para facilitar el ministerio, la alabanza y la organización de la Iglesia Apostólica de la Fe en Cristo Jesús.
+          </p>
+          
+          <p className="text-base text-gray-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+            IAFCJ App es una iniciativa digital comprometida con proporcionar herramientas de alta calidad que sirvan a la comunidad eclesiástica. Nuestro objetivo es hacer que los recursos valiosos sean más accesibles, facilitar el ministerio y fortalecer las conexiones dentro de la comunidad a través de tecnología moderna y útil.
           </p>
         </header>
 
@@ -101,21 +105,32 @@ export const Home: React.FC = () => {
         {/* Footer */}
         <footer className="mt-32 border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} IAFCJ App. Todos los derechos reservados.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4 md:mt-0">
             <Link 
-              to="/privacidad"
+              to="/acerca-de"
               className="hover:text-gray-600 transition-colors"
             >
-              Privacidad
+              Acerca de
             </Link>
-            <a href="#" className="hover:text-gray-600 transition-colors">Contacto</a>
-            <a href="https://iafcj.org" target="_blank" rel="noreferrer" className="hover:text-gray-600 transition-colors">Sitio Oficial</a>
+            <Link 
+              to="/contacto"
+              className="hover:text-gray-600 transition-colors"
+            >
+              Contacto
+            </Link>
             <Link 
               to="/blog"
               className="hover:text-gray-600 transition-colors"
             >
               Blog
             </Link>
+            <Link 
+              to="/privacidad"
+              className="hover:text-gray-600 transition-colors"
+            >
+              Privacidad
+            </Link>
+            <a href="https://iafcj.org" target="_blank" rel="noreferrer" className="hover:text-gray-600 transition-colors">Sitio Oficial</a>
           </div>
         </footer>
       </main>
