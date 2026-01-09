@@ -38,8 +38,8 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gray-50/50 rounded-full blur-3xl translate-y-1/2" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 py-12 md:py-16">
-        <article>
+      <div className="relative z-10 max-w-4xl mx-auto px-6 pt-24 pb-12 md:pt-32 md:pb-16 min-h-screen flex flex-col">
+        <article className="flex-grow">
           <Link 
             to="/blog" 
             className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 text-sm font-medium"
@@ -59,7 +59,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
             {post.title}
           </h1>
           
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none mb-16">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
@@ -109,6 +109,38 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
             </ReactMarkdown>
           </div>
         </article>
+
+        {/* Footer */}
+        <footer className="mt-auto pt-16 pb-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p>&copy; {new Date().getFullYear()} IAFCJ App. Todos los derechos reservados.</p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4 md:mt-0">
+            <Link 
+              to="/acerca-de"
+              className="hover:text-gray-600 transition-colors"
+            >
+              Acerca de
+            </Link>
+            <Link 
+              to="/contacto"
+              className="hover:text-gray-600 transition-colors"
+            >
+              Contacto
+            </Link>
+            <Link 
+              to="/blog"
+              className="hover:text-gray-600 transition-colors"
+            >
+              Blog
+            </Link>
+            <Link 
+              to="/privacidad"
+              className="hover:text-gray-600 transition-colors"
+            >
+              Privacidad
+            </Link>
+            <a href="https://iafcj.org" target="_blank" rel="noreferrer" className="hover:text-gray-600 transition-colors">Sitio Oficial</a>
+          </div>
+        </footer>
       </div>
     </div>
   );

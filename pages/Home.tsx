@@ -58,7 +58,7 @@ export const Home: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gray-50/50 rounded-full blur-3xl translate-y-1/2" />
       </div>
 
-      <main className="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-24">
+      <main className="relative z-10 max-w-5xl mx-auto px-6 pt-24 pb-12 md:pt-32 md:pb-24">
         {/* Header */}
         <header className="mb-20 text-center md:text-left">
           <div className="inline-flex items-center justify-center md:justify-start space-x-2 mb-6">

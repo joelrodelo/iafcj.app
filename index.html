@@ -98,9 +98,26 @@
       .hidden {
         display: none !important;
       }
+      /* #root solo ocupa espacio cuando tiene contenido */
+      #root:empty {
+        display: none;
+      }
+      #root:not(:empty) {
+        position: relative;
+        z-index: 9999;
+        min-height: 100vh;
+        width: 100%;
+      }
+      /* Asegurar que el contenido de React sea visible */
+      #root > * {
+        display: block !important;
+      }
     </style>
   </head>
   <body class="min-h-screen bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+    <!-- React Root - debe estar primero para que React tenga prioridad -->
+    <div id="root"></div>
+    
     <!-- Header / Navegación -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -801,7 +818,7 @@
     </main>
 
     <!-- Footer Global -->
-    <footer class="relative z-10 border-t border-gray-100 bg-white">
+    <footer id="static-footer" class="relative z-10 border-t border-gray-100 bg-white" style="display: none;">
       <div class="max-w-5xl mx-auto px-6 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© <span id="current-year"></span> IAFCJ App. Todos los derechos reservados.</p>
@@ -2395,6 +2412,53 @@
 
       // Actualizar año dinámicamente
       document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // Ocultar contenido HTML estático cuando React está activo
+      function hideStaticContent() {
+        const root = document.getElementById('root');
+        if (root && root.children.length > 0) {
+          // React está montado, ocultar contenido estático
+          const staticPages = [
+            'home-page', 'about-page', 'privacy-page', 'blog-page',
+            'static-footer'
+          ];
+          staticPages.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.style.display = 'none';
+          });
+          
+          // Ocultar posts del blog estáticos
+          document.querySelectorAll('[id^="blog-post-"]').forEach(el => {
+            el.style.display = 'none';
+          });
+          
+          // Ocultar guías estáticas
+          document.querySelectorAll('[id^="guide-"]').forEach(el => {
+            el.style.display = 'none';
+          });
+          
+          // Ocultar navegación estática
+          const nav = document.querySelector('body > nav:first-of-type');
+          if (nav) nav.style.display = 'none';
+        }
+      }
+      
+      // Verificar periódicamente si React se ha montado
+      const checkReact = setInterval(() => {
+        const root = document.getElementById('root');
+        if (root && root.children.length > 0) {
+          hideStaticContent();
+          clearInterval(checkReact);
+        }
+      }, 100);
+      
+      // También verificar después de un tiempo
+      setTimeout(() => {
+        clearInterval(checkReact);
+        hideStaticContent();
+      }, 2000);
     </script>
+    <!-- Cargar React app -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
