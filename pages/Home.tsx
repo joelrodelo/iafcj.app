@@ -87,7 +87,7 @@ export const Home: React.FC = () => {
         </header>
 
         {/* Tools Grid */}
-        <section>
+        <section className="mb-20">
           <div className="flex items-center space-x-2 mb-8">
              <Hammer size={18} className="text-gray-400" />
              <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
@@ -99,6 +99,128 @@ export const Home: React.FC = () => {
             {tools.map(tool => (
               <ToolCard key={tool.id} tool={tool} />
             ))}
+          </div>
+        </section>
+
+        {/* Sección de Contenido Educativo */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-8 text-gray-900">
+            Recursos y Contenido para la Iglesia
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-blue-50 rounded-xl p-6 border border-blue-100">
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                Blog y Artículos Educativos
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Explora nuestro blog con artículos sobre ministerio de alabanza, tecnología en la iglesia, guías prácticas y reflexiones sobre el ministerio. Encuentra consejos para directores de alabanza, información sobre nuestras herramientas y contenido que puede ayudarte en tu ministerio.
+              </p>
+              <Link 
+                to="/blog"
+                className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
+              >
+                Ver todos los artículos →
+              </Link>
+            </div>
+
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100">
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                Guías y Tutoriales
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Aprende a usar nuestras herramientas de manera efectiva con nuestras guías completas. Desde cómo usar el Himnario Digital hasta consejos para mejorar tu ministerio de alabanza, tenemos recursos que te ayudarán a aprovechar al máximo nuestras herramientas.
+              </p>
+              <Link 
+                to="/blog"
+                className="text-green-600 hover:text-green-800 font-medium inline-flex items-center"
+              >
+                Explorar guías →
+              </Link>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-900">
+              ¿Por Qué Usar Herramientas Digitales en la Iglesia?
+            </h3>
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                En la era digital actual, las iglesias están descubriendo los beneficios significativos de adoptar herramientas tecnológicas modernas. Estas herramientas no reemplazan la importancia de la comunidad presencial o las relaciones personales, sino que las complementan y amplifican.
+              </p>
+              <p>
+                <strong>Accesibilidad Mejorada:</strong> Las herramientas digitales hacen que los recursos valiosos estén disponibles las 24 horas del día, desde cualquier lugar del mundo. Esto es especialmente importante para congregaciones con miembros distribuidos geográficamente o para aquellos que necesitan acceso a recursos fuera de los horarios de servicio.
+              </p>
+              <p>
+                <strong>Eficiencia y Organización:</strong> Las herramientas digitales pueden simplificar tareas administrativas, facilitar la planificación de servicios y mejorar la comunicación dentro de la congregación. Esto permite que los líderes se concentren más en el ministerio y menos en tareas administrativas.
+              </p>
+              <p>
+                <strong>Alcance Ampliado:</strong> La tecnología permite que el mensaje y los recursos de la iglesia lleguen a más personas. Ya sea a través de transmisiones en vivo, contenido en línea o herramientas accesibles, la tecnología puede amplificar el impacto del ministerio.
+              </p>
+              <p>
+                <strong>Sostenibilidad:</strong> Las herramientas digitales reducen la necesidad de materiales impresos, lo que no solo ahorra costos sino que también reduce el impacto ambiental. Esto es especialmente relevante para recursos que necesitan actualizarse regularmente, como himnarios o materiales de enseñanza.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Sección de Beneficios */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-8 text-gray-900">
+            Cómo Nuestras Herramientas Te Ayudan
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="border-l-4 border-blue-600 pl-4">
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                Para Directores de Alabanza
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Planifica servicios más efectivos con acceso rápido a himnos, búsqueda por tema y organización por categorías. El Himnario Digital te permite encontrar el himno perfecto en segundos y compartirlo fácilmente con tu equipo.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-green-600 pl-4">
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                Para Equipos de Música
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Accede a letras y acordes completos desde cualquier dispositivo. Prepara ensayos con anticipación y ten toda la información que necesitas durante las presentaciones, todo en un solo lugar accesible.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-purple-600 pl-4">
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                Para la Congregación
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Participa plenamente en la adoración incluso si no conoces los himnos de memoria. Los visitantes pueden seguir fácilmente y los miembros pueden usar el himnario para devocionales personales.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Sección de Compromiso */}
+        <section className="mb-20 bg-gradient-to-r from-blue-50 to-gray-50 rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
+            Nuestro Compromiso Contigo
+          </h2>
+          <div className="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              En IAFCJ App, entendemos que la tecnología debe servir al ministerio, no al revés. Por eso, cada herramienta que desarrollamos está diseñada con un propósito claro: facilitar el ministerio y fortalecer la comunidad de la Iglesia Apostólica de la Fe en Cristo Jesús.
+            </p>
+            <p>
+              <strong>Calidad y Confiabilidad:</strong> Nos comprometemos a mantener nuestras herramientas actualizadas, funcionando correctamente y libres de errores. Tu confianza es importante para nosotros.
+            </p>
+            <p>
+              <strong>Escucha Activa:</strong> Valoramos tu feedback y lo usamos para mejorar continuamente nuestras herramientas. Si tienes sugerencias o encuentras problemas, estamos aquí para escucharte.
+            </p>
+            <p>
+              <strong>Accesibilidad:</strong> Creemos que los recursos valiosos deben ser accesibles para todos. Trabajamos para asegurar que nuestras herramientas sean fáciles de usar, independientemente de tu nivel de conocimiento tecnológico.
+            </p>
+            <p>
+              <strong>Mejora Continua:</strong> El lanzamiento de una herramienta es solo el comienzo. Estamos comprometidos a mejorar y expandir nuestras herramientas basándonos en las necesidades reales de la comunidad.
+            </p>
           </div>
         </section>
 
