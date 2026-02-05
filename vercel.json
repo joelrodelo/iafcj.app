@@ -11,6 +11,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path/",
+      "destination": "/blog/:path",
+      "permanent": true
+    },
+    {
+      "source": "/acerca-de/",
+      "destination": "/acerca-de",
+      "permanent": true
+    },
+    {
+      "source": "/contacto/",
+      "destination": "/contacto",
+      "permanent": true
+    },
+    {
       "source": "/nosotros",
       "destination": "/",
       "permanent": true

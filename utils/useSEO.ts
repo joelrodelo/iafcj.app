@@ -14,10 +14,16 @@ const DEFAULT_OG_IMAGE = `${BASE_URL}/og.png`;
  * Hook para actualizar dinámicamente los meta tags SEO
  * Resuelve el problema de canonical tags estáticos en SPAs
  */
+/** Formato canonical único: raíz con barra, rutas sin barra final (evita "Google chose different canonical"). */
+function buildCanonicalUrl(canonical: string): string {
+  if (canonical.startsWith('http')) return canonical;
+  const path = canonical === '/' ? '/' : canonical.replace(/\/+$/, '') || '/';
+  return path === '/' ? `${BASE_URL}/` : `${BASE_URL}${path}`;
+}
+
 export const useSEO = ({ title, description, canonical, ogImage }: SEOConfig) => {
   useEffect(() => {
-    // Construir URL canónica completa
-    const fullCanonical = canonical.startsWith('http') ? canonical : `${BASE_URL}${canonical}`;
+    const fullCanonical = buildCanonicalUrl(canonical);
     
     // Actualizar título
     document.title = title;
