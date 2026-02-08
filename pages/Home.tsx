@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Hammer, Globe, Music, Users, HeartHandshake } from 'lucide-react';
+import { BookOpen, Hammer, HeartHandshake, ArrowUpRight } from 'lucide-react';
 import { ToolCard } from '../components/ToolCard';
 import { Tool } from '../types';
 import { useSEO } from '../utils/useSEO';
@@ -11,43 +11,17 @@ export const Home: React.FC = () => {
     description: 'Portal completo de herramientas digitales para la Iglesia Apostólica de la Fe en Cristo Jesús. Accede al Himnario Digital, guías para ministerio de alabanza y más.',
     canonical: '/',
   });
+  // Solo herramientas activas (las "Próximamente" se comunican en el blog para cumplir políticas Google Ads)
   const tools: Tool[] = [
     {
       id: 'himnario',
       title: 'Himnario Digital',
       description: 'Colección completa de himnos y coros de la IAFCJ. Búsqueda rápida, letras y acordes optimizados para móvil.',
-      url: 'http://himnario.iafcj.app/',
+      url: 'https://himnario.iafcj.app/',
       icon: BookOpen,
       isExternal: true,
       status: 'active'
     },
-    {
-      id: 'liturgia',
-      title: 'Liturgia y Recursos',
-      description: 'Guías para directores de culto, lecturas bíblicas y orden del servicio dominical.',
-      url: '#',
-      icon: Music,
-      isExternal: false,
-      status: 'coming_soon'
-    },
-    {
-      id: 'directorio',
-      title: 'Directorio de Iglesias',
-      description: 'Encuentra la congregación más cercana, horarios de servicio y contacto pastoral.',
-      url: '#',
-      icon: Globe,
-      isExternal: false,
-      status: 'coming_soon'
-    },
-    {
-      id: 'liderazgo',
-      title: 'Portal de Liderazgo',
-      description: 'Recursos exclusivos para pastores, líderes locales y administradores.',
-      url: '#',
-      icon: Users,
-      isExternal: false,
-      status: 'coming_soon'
-    }
   ];
 
   return (
@@ -81,9 +55,18 @@ export const Home: React.FC = () => {
             Una suite centralizada de utilidades digitales diseñadas para facilitar el ministerio, la alabanza y la organización de la Iglesia Apostólica de la Fe en Cristo Jesús.
           </p>
           
-          <p className="text-base text-gray-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto md:mx-0 leading-relaxed mb-8">
             IAFCJ App es una iniciativa digital comprometida con proporcionar herramientas de alta calidad que sirvan a la comunidad eclesiástica. Nuestro objetivo es hacer que los recursos valiosos sean más accesibles, facilitar el ministerio y fortalecer las conexiones dentro de la comunidad a través de tecnología moderna y útil.
           </p>
+          <a
+            href="https://himnario.iafcj.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors shadow-sm"
+          >
+            Abrir Himnario Digital
+            <ArrowUpRight size={18} />
+          </a>
         </header>
 
         {/* Tools Grid */}
@@ -95,7 +78,7 @@ export const Home: React.FC = () => {
              </h2>
           </div>
          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {tools.map(tool => (
               <ToolCard key={tool.id} tool={tool} />
             ))}
@@ -229,10 +212,10 @@ export const Home: React.FC = () => {
           <p>&copy; {new Date().getFullYear()} IAFCJ App. Todos los derechos reservados.</p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4 md:mt-0">
             <Link 
-              to="/acerca-de"
+              to="/nosotros"
               className="hover:text-gray-600 transition-colors"
             >
-              Acerca de
+              Nosotros
             </Link>
             <Link 
               to="/contacto"
@@ -251,6 +234,12 @@ export const Home: React.FC = () => {
               className="hover:text-gray-600 transition-colors"
             >
               Privacidad
+            </Link>
+            <Link 
+              to="/terminos"
+              className="hover:text-gray-600 transition-colors"
+            >
+              Términos
             </Link>
             <a href="https://iafcj.org" target="_blank" rel="noreferrer" className="hover:text-gray-600 transition-colors">Sitio Oficial</a>
           </div>

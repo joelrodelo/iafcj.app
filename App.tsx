@@ -6,6 +6,7 @@ import { BlogPostPage } from './pages/BlogPostPage';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { TermsOfService } from './components/TermsOfService';
 import { Header } from './components/Header';
 
 const App: React.FC = () => {
@@ -18,7 +19,9 @@ const App: React.FC = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/acerca-de" element={<AboutPage />} />
+        <Route path="/nosotros" element={<AboutPage />} />
         <Route path="/contacto" element={<ContactPage />} />
+        <Route path="/terminos" element={<TermsOfService />} />
       </Routes>
     </>
   );

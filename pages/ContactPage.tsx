@@ -72,7 +72,7 @@ export const ContactPage: React.FC = () => {
             <h2 className="text-2xl font-semibold mb-6 text-gray-900">Envíanos un Mensaje</h2>
             <div className="bg-gray-50 p-8 rounded-lg">
               <p className="text-gray-700 leading-relaxed mb-6">
-                Por el momento, estamos trabajando en implementar un formulario de contacto directo. Mientras tanto, puedes contactarnos a través de los siguientes medios:
+                Puedes contactarnos por correo electrónico. Incluye toda la información relevante para que podamos responderte de la mejor manera.
               </p>
               
               <div className="space-y-4">
@@ -80,11 +80,14 @@ export const ContactPage: React.FC = () => {
                   <Mail className="text-blue-600 mt-1" size={20} />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Correo Electrónico</h3>
-                    <p className="text-gray-700">
-                      Para consultas generales y soporte, puedes enviarnos un correo electrónico. Por favor, incluye toda la información relevante para que podamos ayudarte de la mejor manera posible.
+                    <p className="text-gray-700 mb-2">
+                      Para consultas generales, sugerencias y soporte:
                     </p>
-                    <p className="text-gray-600 mt-2 text-sm">
-                      (Dirección de correo electrónico disponible próximamente)
+                    <p className="text-lg">
+                      <a href="mailto:contacto@iafcj.app" className="text-blue-600 hover:text-blue-800 font-medium underline">contacto@iafcj.app</a>
+                    </p>
+                    <p className="text-gray-600 mt-3 text-sm">
+                      <strong>Ubicación:</strong> Proyecto en línea — comunidad global. Atendemos consultas en español.
                     </p>
                   </div>
                 </div>

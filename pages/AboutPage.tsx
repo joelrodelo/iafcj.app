@@ -6,8 +6,8 @@ import { useSEO } from '../utils/useSEO';
 export const AboutPage: React.FC = () => {
   useSEO({
     title: 'Acerca de Nosotros - IAFCJ App',
-    description: 'Conoce más sobre IAFCJ App, nuestra misión, visión y compromiso con la comunidad de la Iglesia Apostólica de la Fe en Cristo Jesús. Descubre cómo trabajamos para servir con herramientas digitales útiles.',
-    canonical: '/acerca-de',
+    description: 'Conoce más sobre IAFCJ App, nuestra misión, visión y compromiso con la comunidad de la Iglesia Apostólica de la Fe en Cristo Jesús. Iniciativa digital independiente al servicio de la iglesia.',
+    canonical: '/nosotros',
   });
 
   return (
@@ -37,9 +37,19 @@ export const AboutPage: React.FC = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Acerca de Nosotros
+              Acerca de IAFCJ App
             </h1>
           </div>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-900">¿Quiénes Somos?</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Somos un equipo de desarrolladores, diseñadores y miembros de la comunidad comprometidos con poner la tecnología al servicio del ministerio. Este proyecto nació con la visión de que los recursos valiosos —como el himnario— estén al alcance de todos, en cualquier momento y desde cualquier dispositivo.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Trabajamos de forma voluntaria y colaborativa, priorizando la calidad y la accesibilidad de las herramientas que ofrecemos.
+            </p>
+          </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900">Nuestra Historia</h2>
@@ -59,6 +69,9 @@ export const AboutPage: React.FC = () => {
               <Target className="text-blue-600 mt-1" size={24} />
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-gray-900">Nuestra Misión</h2>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  IAFCJ App es una iniciativa digital independiente creada para facilitar el acceso a herramientas, recursos y contenidos de utilidad para la comunidad de la Iglesia Apostólica de la Fe en Cristo Jesús. No representamos oficialmente a ninguna organización religiosa; nuestro propósito es servir con tecnología útil y accesible.
+                </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Nuestra misión es proporcionar herramientas digitales de alta calidad que faciliten el ministerio, fortalezcan la comunidad y hagan que los recursos valiosos sean más accesibles para todos los miembros de la Iglesia Apostólica de la Fe en Cristo Jesús.
                 </p>
@@ -193,12 +206,16 @@ export const AboutPage: React.FC = () => {
           </section>
 
           <section className="mb-12 bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-900">Información de Contacto</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-900">Contacto</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Para más información sobre IAFCJ App, nuestras herramientas o cómo podemos servirte, visita nuestra <Link to="/contacto" className="text-blue-600 hover:text-blue-800 underline">página de contacto</Link>.
+              Para más información sobre IAFCJ App, nuestras herramientas o cómo podemos servirte:
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              También puedes explorar nuestro <Link to="/blog" className="text-blue-600 hover:text-blue-800 underline">blog</Link> para mantenerte actualizado sobre nuevas funcionalidades, mejoras y recursos disponibles.
+            <p className="text-gray-700 leading-relaxed mb-2">
+              <strong>Email:</strong>{' '}
+              <a href="mailto:contacto@iafcj.app" className="text-blue-600 hover:text-blue-800 underline">contacto@iafcj.app</a>
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              También puedes usar nuestra <Link to="/contacto" className="text-blue-600 hover:text-blue-800 underline">página de contacto</Link> o explorar nuestro <Link to="/blog" className="text-blue-600 hover:text-blue-800 underline">blog</Link> para mantenerte actualizado.
             </p>
           </section>
         </article>
